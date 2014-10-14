@@ -1,5 +1,4 @@
 import serial
-
 from flask import Flask
 from flask import jsonify
 
@@ -7,6 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    # Default returned when you load the url
     return "pyRotatorServer!"
 
 @app.route('/azimuth/<degrees>')
@@ -50,5 +50,5 @@ def post_elevation(degrees):
     return jsonify(elevation=degrees)
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = True # Enabled debugging
     app.run()
