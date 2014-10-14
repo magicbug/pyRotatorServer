@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "pyRotatorServer!"
 
 @app.route('/azimuth/<degrees>')
 def post_azimuth(degrees):
